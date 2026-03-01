@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 // custom routes
-import userRouter from "./routes/auth.route";
+import userRouter from "./routes/auth.route.js";
 
 dotenv.config();
 
@@ -29,5 +29,5 @@ app.get("/",(req,res)=>{
 app.use('/api/v1/users', userRouter);
 
 app.listen(port,()=>{
-    console.log(`Backend is listening at port: ${process}`);
+    console.log(`Backend is listening at port: ${port}`);
 })
